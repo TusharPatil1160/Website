@@ -1,0 +1,1078 @@
+/* ===============================
+   Google Font
+================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+/* ===============================
+   Reset
+================================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#09090f;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ===============================
+   Scrollbar
+================================= */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff4d88;
+    border-radius:20px;
+}
+
+/* ===============================
+   Floating Hearts Container
+================================= */
+#hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4d88;
+    animation:floatHeart linear infinite;
+    opacity:.7;
+}
+
+@keyframes floatHeart{
+
+    from{
+        transform:translateY(100vh) scale(.5);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.8;
+    }
+
+    to{
+        transform:translateY(-120px) scale(1.4);
+        opacity:0;
+    }
+
+}
+
+/* ===============================
+   Navigation
+================================= */
+
+nav{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 10%;
+
+    background:rgba(0,0,0,.25);
+
+    backdrop-filter:blur(14px);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#ff4d88;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.35s;
+
+    font-weight:500;
+
+}
+
+nav a:hover{
+
+    color:#ff4d88;
+
+}
+
+/* ===============================
+   Hero
+================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.6)),
+
+    url("images/cover.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        transparent,
+
+        rgba(0,0,0,.45),
+
+        #09090f
+
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero h3{
+
+    font-size:35px;
+
+    color:#ffd6e7;
+
+    letter-spacing:4px;
+
+}
+
+.hero h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:95px;
+
+    margin:20px 0;
+
+    color:#ff4d88;
+
+    text-shadow:
+
+    0 0 20px #ff4d88,
+
+    0 0 50px #ff4d88;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    color:#eee;
+
+}
+
+/* ===============================
+   Button
+================================= */
+
+button{
+
+    margin-top:45px;
+
+    border:none;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+
+        45deg,
+
+        #ff4d88,
+
+        #ff7ca8
+
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 10px 35px rgba(255,77,136,.45);
+
+}
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 18px 45px rgba(255,77,136,.6);
+
+}
+
+/* ===============================
+   Countdown
+================================= */
+
+.counter{
+
+    padding:110px 8%;
+
+    text-align:center;
+
+}
+
+.counter h2{
+
+    font-size:48px;
+
+    margin-bottom:60px;
+
+    color:#ff7ca8;
+
+}
+
+.time-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+}
+
+.box{
+
+    width:170px;
+
+    padding:35px 20px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    transition:.35s;
+
+}
+
+.box:hover{
+
+    transform:translateY(-12px);
+
+    background:rgba(255,77,136,.18);
+
+}
+
+.box h1{
+
+    font-size:52px;
+
+    color:#ff4d88;
+
+}
+
+.box span{
+
+    color:#ddd;
+
+    letter-spacing:2px;
+
+    font-size:15px;
+
+}
+
+/* ===============================
+   Section Heading
+================================= */
+
+section h2{
+
+    font-size:48px;
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+    color:#ff7ca8;
+
+}
+/* ===============================
+   Love Letter
+================================= */
+
+.letter {
+    padding: 100px 10%;
+}
+
+.paper {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,.15);
+    line-height: 2;
+    font-size: 19px;
+    color: #f5f5f5;
+    box-shadow: 0 20px 40px rgba(0,0,0,.3);
+}
+
+.paper p{
+    white-space: pre-line;
+}
+
+/* ===============================
+   Gallery
+================================= */
+
+.gallery{
+    padding:100px 8%;
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.45s;
+
+    border:3px solid rgba(255,255,255,.1);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.08) rotate(2deg);
+
+    border-color:#ff4d88;
+
+    box-shadow:
+
+    0 15px 35px rgba(255,77,136,.45);
+
+}
+
+/* ===============================
+   Reasons
+================================= */
+
+.reasons{
+
+    padding:100px 8%;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:22px;
+
+    transition:.4s;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    font-size:40px;
+
+}
+
+.card h3{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    color:white;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(255,77,136,.35),
+
+        rgba(255,255,255,.08)
+
+    );
+
+    box-shadow:
+
+    0 15px 40px rgba(255,77,136,.35);
+
+}
+
+/* ===============================
+   Timeline
+================================= */
+
+.timeline{
+
+    padding:100px 8%;
+
+}
+
+.line{
+
+    max-width:900px;
+
+    margin:auto;
+
+    border-left:4px solid #ff4d88;
+
+    padding-left:40px;
+
+    position:relative;
+
+}
+
+.event{
+
+    position:relative;
+
+    margin-bottom:60px;
+
+    padding:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:20px;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.1);
+
+}
+
+.event::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#ff4d88;
+
+    left:-50px;
+
+    top:32px;
+
+    box-shadow:0 0 20px #ff4d88;
+
+}
+
+.event h3{
+
+    color:#ff7ca8;
+
+    margin-bottom:10px;
+
+}
+
+.event p{
+
+    color:#ddd;
+
+    line-height:1.8;
+
+}
+
+.event:hover{
+
+    transform:translateX(10px);
+
+    background:rgba(255,77,136,.15);
+
+}
+
+/* ===============================
+   Quotes
+================================= */
+
+.quotes{
+
+    padding:100px 8%;
+
+    text-align:center;
+
+}
+
+#quote{
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:32px;
+
+    font-family:'Great Vibes',cursive;
+
+    color:#ffd6e7;
+
+    line-height:1.8;
+
+    min-height:120px;
+
+}
+
+/* ===============================
+   Fade Animation
+================================= */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.fade-up.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===============================
+   Floating Effect
+================================= */
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.card,
+.box{
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+/* ==========================================
+   MUSIC SECTION
+========================================== */
+
+.music{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.music button{
+    margin-top:30px;
+}
+
+/* ==========================================
+   SURPRISE BUTTON
+========================================== */
+
+.surprise{
+    padding:80px 8%;
+    text-align:center;
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+#popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:9999;
+
+}
+
+#popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.popup-content{
+
+    width:90%;
+
+    max-width:600px;
+
+    background:#111;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    text-align:center;
+
+    position:relative;
+
+    border:2px solid #ff4d88;
+
+    box-shadow:
+
+    0 0 40px rgba(255,77,136,.5);
+
+}
+
+.popup-content h1{
+
+    font-family:'Great Vibes',cursive;
+
+    color:#ff4d88;
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.popup-content p{
+
+    line-height:2;
+
+    color:#eee;
+
+    font-size:19px;
+
+}
+
+#close{
+
+    position:absolute;
+
+    top:20px;
+
+    right:25px;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+#close:hover{
+
+    color:#ff4d88;
+
+    transform:rotate(90deg);
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    padding:60px 10%;
+
+    text-align:center;
+
+    background:#070707;
+
+    margin-top:60px;
+
+}
+
+footer h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:48px;
+
+    color:#ff4d88;
+
+}
+
+footer p{
+
+    margin-top:15px;
+
+    color:#bbb;
+
+}
+
+/* ==========================================
+   GLOW EFFECT
+========================================== */
+
+.card:hover,
+.box:hover,
+.event:hover{
+
+    box-shadow:
+
+    0 0 25px rgba(255,77,136,.5);
+
+}
+
+/* ==========================================
+   IMAGE HOVER
+========================================== */
+
+.gallery-grid img{
+
+    filter:brightness(.95);
+
+}
+
+.gallery-grid img:hover{
+
+    filter:brightness(1.1);
+
+}
+
+/* ==========================================
+   BUTTON ACTIVE
+========================================== */
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1000px){
+
+.hero h1{
+
+    font-size:75px;
+
+}
+
+nav{
+
+    padding:18px 6%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+.hero h1{
+
+    font-size:55px;
+
+}
+
+.hero h3{
+
+    font-size:26px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+    padding:0 20px;
+
+}
+
+.counter h2,
+.gallery h2,
+.letter h2,
+.timeline h2,
+.reasons h2,
+.music h2,
+.quotes h2{
+
+    font-size:36px;
+
+}
+
+.paper{
+
+    padding:30px;
+
+}
+
+.popup-content{
+
+    padding:35px;
+
+}
+
+.popup-content h1{
+
+    font-size:45px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
+
+button{
+
+    width:90%;
+
+}
+
+.box{
+
+    width:140px;
+
+}
+
+.gallery-grid img{
+
+    height:250px;
+
+}
+
+.popup-content{
+
+    width:95%;
+
+}
+
+}
+
+/* ==========================================
+   END
+========================================== */
+button{
+    position:relative;
+    overflow:hidden;
+}
+
+.ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    background:rgba(255,255,255,.5);
+
+    animation:ripple .6s linear;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:scale(4);
+
+        opacity:0;
+
+    }
+
+}
